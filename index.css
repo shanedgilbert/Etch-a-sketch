@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+.reset {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
 .outer-grid-box {
     display: flex;
     justify-content: center;
@@ -12,7 +17,7 @@ body {
 
 .title {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     margin: 0 !important;
 }
 
