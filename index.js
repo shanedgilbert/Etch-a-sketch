@@ -1,5 +1,13 @@
+/*
+Etch-a-Sketch
+Creates an initial grid of 10x10 squares. Each square changes to a random color on mouseover.
+When the user presses reset, a prompt appears, asking the user to pick a new size for the grid.
+*/
+
 const sketchGrid = document.querySelector(".sketch");
-let boxSize = 16;
+let sketchSize = 800;
+sketchGrid.style.width = sketchSize + "px";
+let boxSize = 10;
 createBox(boxSize);
 
 //Creating the grid
@@ -13,6 +21,8 @@ function createBox(size) {
             gridSqr.classList.add('grid-each');
             sketchGrid.appendChild(gridSqr);
             gridSqr.style.backgroundColor = "rgb(255, 255, 255)";
+            gridSqr.style.flexBasis = (sketchSize / size) + "px";
+            gridSqr.style.height = (sketchSize / size) + "px";
             gridSqr.classList.add((i * 16) + j);
             gridSqr.addEventListener("mouseover", colorChange);
         }
@@ -41,12 +51,12 @@ function colorChange() {
 //Resizes the box size based on user input
 function resetGrid() {
     clearBox(boxSize);
-    boxSize = Number(prompt("Designate a new size for the Etch-a-sketch"));
+    boxSize = Number(prompt("Designate a new size for each edge Etch-a-sketch. ie: 16 = 16x16"));
     createBox(boxSize);
 }
 
+//Clears the grid
 function clearBox(size) {
-
     for (let i = 0; i < size; i++) {
         for (let j = 1; j <= size; j++) {
             let gridRemove = document.querySelector("." + CSS.escape((i * 16) + j));

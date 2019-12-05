@@ -17,8 +17,13 @@ body {
 
 .title {
     text-align: center;
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     margin: 0 !important;
+}
+
+.title>h1,
+.title>p {
+    margin: .5rem;
 }
 
 .sketch {
@@ -26,14 +31,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    width: 50%;
+    border: 2px solid black;
 }
 
 .grid-each {
     flex-wrap: wrap;
-    flex: 1 0 6%;
     text-align: center;
     justify-content: center;
-    border: .5px solid black;
-    height: 50px;
+    /* border: .5px solid black; */
 }
